@@ -28,6 +28,10 @@ This repository contains the implementation of a novel hybrid framework for clas
    - Multilayer Perceptron (MLP) for initial classification.
    - Quantum SVM for advanced classification leveraging quantum computing principles.
 
+![image](https://github.com/user-attachments/assets/88677a10-f016-4d41-90d3-9e34490c1c07)
+![image](https://github.com/user-attachments/assets/301c5353-955d-408e-a4b4-4fdfc51cb2cd)
+![image](https://github.com/user-attachments/assets/c70501ee-1276-48e1-83dd-91088086b0cf)
+
 ## Datasets
 
 - **ABIDE-I**: Used for training and testing.
