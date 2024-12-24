@@ -1,15 +1,45 @@
-# Dual-Block-Feature-Fusion-Network-for-Autism-detection-
-This study proposes a deep learning image classifier, that invloves dual-track feature fusion net
-work architecture comprising Swin Transformer and customised Convolutional Neural
- Network (CNN) for enhanced classification accuracy between Autism Spectrum Disor
-der (ASD) and Typical Development (TD), achieving a classification accuracy of 98.7%.
- Swin Transformers excel in capturing long-range dependencies within images, facilitat
-ing a deeper understanding of interrelations among different image components. Con
-currently, CNNs are adept at extracting local features, thus contributing to improved
- classification performance by considering both local and global features. In the second
- approach, a Quantum Support Vector Machine (QSVM) is employed to classify features
- extracted from the feature fusion network. This model operates on a quantum simula
-tor utilizing 16 qubits, achieving a classification accuracy of 96%. Notably, leveraging
- a quantum computer for feature classification could significantly accelerate predictions,
- thereby reducing computational time and improving the overall efficiency of the classi
-fication.
+# Autism Spectrum Disorder (ASD) Classification with Dual-Track Feature Fusion and Quantum Machine Learning
+
+This repository contains the implementation of a novel hybrid framework for classifying Autism Spectrum Disorder (ASD) using Magnetic Resonance Imaging (MRI) data. The project integrates cutting-edge deep learning and quantum machine learning techniques to achieve high classification accuracy.
+
+## Features
+
+- **Dual-Track Feature Fusion**:
+  - **Swin Transformer**: Captures global dependencies in MRI images through a hierarchical approach and shifted windows.
+  - **Custom CNN**: Extracts local spatial features using a 2D convolutional neural network with progressive feature extraction.
+
+- **Quantum Support Vector Machine (QSVM)**:
+  - Quantum computing-based classification using quantum feature maps and kernel functions.
+
+- **High Accuracy**:
+  - Achieved 98.7% accuracy with the ABIDE-I dataset.
+  - Validated with ABIDE-II dataset, achieving 96.82% accuracy.
+
+## Architecture
+
+1. **Dual-Track Feature Extraction**:
+   - Global features extracted by Swin Transformer.
+   - Local features extracted by Custom CNN.
+
+2. **Feature Fusion**:
+   - Features from both models are reduced using PCA and fused for classification.
+
+3. **Classification**:
+   - Multilayer Perceptron (MLP) for initial classification.
+   - Quantum SVM for advanced classification leveraging quantum computing principles.
+
+## Datasets
+
+- **ABIDE-I**: Used for training and testing.
+- **ABIDE-II**: Used for independent validation.
+  - Data split: 80% training, 10% validation, 10% testing.
+  - Includes 2D MRI slices derived from original NIfTI files.
+
+## Performance Metrics
+
+| Model             | Accuracy | Precision | Recall | F1-Score |
+|--------------------|----------|-----------|--------|----------|
+| Swin Transformer  | 90.17%   | 90.18%    | 90.85% | 90.27%   |
+| Custom CNN        | 95.12%   | 95.50%    | 96.34% | 95.88%   |
+| Hybrid Model (MLP)| 98.7%    | 98.12%    | 98.77% | 98.65%   |
+| QSVM              | 96%      | 96.66%    | 96.12% | 96.88%   |
